@@ -1,0 +1,17 @@
+import calendar
+import datetime
+import locale
+import sys
+
+# ZADANIE 1
+
+def kalendarz(argv):
+    month_in = input("Podaj miesiąc: ")
+    year_in = input("Podaj rok: ")
+    locale.setlocale(locale.LC_ALL, 'pl_PL')
+    month_int = datetime.datetime.strptime(month_in, "%B").month
+    year = int(year_in)
+    print(calendar.month(year, month_int))
+
+print("Zadanie 1 - Kalendarz")
+kalendarz(sys.argv)

@@ -1,0 +1,20 @@
+import sys
+
+# ZADANIE 4
+
+def zamiana_liczb(argv):
+    jednosci = ["", "I", "II", "III", "IV", "V", "VI", "VII", "IIX", "IX"]
+    dziesiatki = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "XXC", "XC"]
+    setki = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "CCM", "CM"]
+    tysiace = ["", "M", "MM", "MMM", "|XL|", "|L|", "|LX|", "|LXX|", "|XXC|", "|XC|"]
+    tysiace_x10 = ["", "|C|", "|CC|", "|CCC|", "|CD|", "|D|", "|DC|", "|DCC|", "|CCM|", "|CM|"]
+
+    number_in = input('Podaj liczbę: ')
+
+    while len(number_in) <= 5:
+        number_in = "0" + number_in
+    print(tysiace_x10[int(number_in[-5])] + tysiace[int(number_in[-4])] + setki[int(number_in[-3])] + dziesiatki[int(number_in[-2])] + jednosci[int(number_in[-1])])
+
+
+print("Zadanie 4 - Zamiana liczby dziesiętnej na liczbę rzymską")
+zamiana_liczb(sys.argv)

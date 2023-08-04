@@ -1,0 +1,15 @@
+import datetime
+import sys
+
+
+# ZADANIE 5
+
+def licznik_dni(argv):
+    date1_in = input('Podaj datę początkową [dd.mm.rrrr]: ')
+    date2_in = input('Podaj datę końcową [dd.mm.rrrr]: ')
+    date1 = datetime.datetime.strptime(date1_in, '%d.%m.%Y')
+    date2 = datetime.datetime.strptime(date2_in, '%d.%m.%Y')
+    print(abs(date1 - date2).days)
+
+print("Zadanie 5 - Obliczanie ile dni mija między jedną a drugą datą.")
+licznik_dni(sys.argv)

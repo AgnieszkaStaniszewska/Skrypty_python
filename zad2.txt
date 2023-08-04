@@ -1,0 +1,12 @@
+import sys
+from collections import Counter
+
+# ZADANIE 2
+
+def funkcja_sprawdzajaca(argv):
+    text_in = input('Podaj tekst do sprawdzenia: ')
+    counter = Counter(text_in)
+    print(counter)
+
+print("Zadanie 2 - Funkcja sprawdzająca: ")
+funkcja_sprawdzajaca(sys.argv)
